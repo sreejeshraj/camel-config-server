@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns="http://camel.apache.org/schema/spring">
+	<route id="xml-route-timer">
+		<from uri="timer://xml-trigger?period=3s" />
+		<!-- <marshal>
+			<zipFile />
+		</marshal> -->
+		
+		<to uri="log:xml-out" />
+	</route>
+</routes>
